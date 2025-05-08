@@ -1,27 +1,39 @@
-#  Crawl Dữ Liệu Bất Động Sản từ alonhadat.com.vn
+# 🏠 Crawl Dữ Liệu Bất Động Sản từ alonhadat.com.vn
 
-Đây là một script **Python** dùng để tự động thu thập dữ liệu bất động sản từ website [alonhadat.com.vn](https://alonhadat.com.vn). Script này sẽ:
-
-✅ Truy cập website bất động sản.  
-✅ Chọn tỉnh/thành phố  
-✅ Chọn loại nhà đất 
-✅ Tự động phân trang và thu thập **Tiêu đề, Mô tả, Địa chỉ, Diện tích, Giá** của các bài đăng.  
-✅ Lưu dữ liệu thành file **Excel**.  
-✅ Tự động chạy vào **6:00 sáng** mỗi ngày.
+Đây là một script **Python** tự động thu thập dữ liệu bất động sản từ website [alonhadat.com.vn](https://alonhadat.com.vn).  
+Script được xây dựng nhằm **thu thập thông tin nhà đất** một cách **nhanh chóng, tự động, chính xác** để phục vụ cho các mục đích như nghiên cứu thị trường, phân tích giá bất động sản, thống kê, hoặc lưu trữ dữ liệu cá nhân.
 
 ---
 
-##  Cách sử dụng
+## ✨ Chức năng chính
 
-### 1. Yêu cầu hệ thống
+✅ Truy cập website bất động sản alonhadat.com.vn.  
+✅ Chọn **tỉnh/thành phố** (mặc định là **Hà Nội**).  
+✅ Chọn **loại nhà đất** (mặc định là **Nhà**).  
+✅ Tự động phân trang, thu thập dữ liệu từ **tất cả các trang**.  
+✅ Lấy các thông tin chi tiết: **Tiêu đề, Mô tả, Địa chỉ, Diện tích, Giá** của từng bài đăng.  
+✅ Lưu dữ liệu thành file **Excel (.xlsx)** dễ dàng xử lý sau này.  
+✅ Tự động chạy vào **06:00 sáng** mỗi ngày mà không cần thao tác thủ công.
 
-- Python 3.7+
-- Trình duyệt **Google Chrome**
-- **ChromeDriver** tương ứng với phiên bản Chrome đang dùng
+---
 
-### 2. Cài đặt thư viện cần thiết
+## 🚀 Hướng dẫn sử dụng chi tiết
 
-Chạy lệnh sau trong terminal/cmd:
+### 1️⃣ Yêu cầu hệ thống
+
+Để chạy được script này, máy tính của bạn cần đảm bảo các yêu cầu sau:
+
+- Python phiên bản **3.7 hoặc cao hơn**.
+- Trình duyệt **Google Chrome** đã cài sẵn trên máy.
+- **ChromeDriver** tương thích với phiên bản Chrome (nếu Chrome đang ở phiên bản 122 thì ChromeDriver cũng cần bản 122).
+
+👉 Kiểm tra phiên bản Chrome bằng cách truy cập `chrome://version/` trên trình duyệt.
+
+---
+
+### 2️⃣ Cài đặt các thư viện Python cần thiết
+
+Chạy lệnh dưới đây trong **Terminal (Linux/Mac)** hoặc **CMD (Windows)**:
 
 ```bash
 pip install selenium beautifulsoup4 pandas schedule openpyxl
